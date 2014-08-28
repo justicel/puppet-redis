@@ -68,17 +68,17 @@
 # Copyright 2012 Thomas Van Doren, unless otherwise noted.
 #
 define redis::instance (
-  $redis_port = $redis::params::redis_port,
-  $redis_bind_address = $redis::params::redis_bind_address,
-  $redis_max_memory = $redis::params::redis_max_memory,
-  $redis_max_clients = $redis::params::redis_max_clients,
-  $redis_timeout = $redis::params::redis_timeout,
-  $redis_loglevel = $redis::params::redis_loglevel,
-  $redis_databases = $redis::params::redis_databases,
+  $redis_port                    = $redis::params::redis_port,
+  $redis_bind_address            = $redis::params::redis_bind_address,
+  $redis_max_memory              = $redis::params::redis_max_memory,
+  $redis_max_clients             = $redis::params::redis_max_clients,
+  $redis_timeout                 = $redis::params::redis_timeout,
+  $redis_loglevel                = $redis::params::redis_loglevel,
+  $redis_databases               = $redis::params::redis_databases,
   $redis_slowlog_log_slower_than = $redis::params::redis_slowlog_log_slower_than,
-  $redis_slowlog_max_len = $redis::params::redis_slowlog_max_len,
-  $redis_password = $redis::params::redis_password,
-  $redis_saves = $redis::params::redis_saves
+  $redis_slowlog_max_len         = $redis::params::redis_slowlog_max_len,
+  $redis_password                = $redis::params::redis_password,
+  $redis_saves                   = $redis::params::redis_saves
   ) {
 
   # Using Exec as a dependency here to avoid dependency cyclying when doing
